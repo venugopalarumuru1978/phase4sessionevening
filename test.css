@@ -1,0 +1,43 @@
+h1{
+    text-align: center;
+background-color: darkgreen;
+color:whitesmoke;
+margin-left: 20px;
+margin-right: 20px;
+}
+
+p{
+    text-align: justify;
+background-color: #9F880A;
+color:whitesmoke;
+margin-left: 20px;
+margin-right: 20px;
+border-style: solid;
+border-color: crimson;
+padding:10px;
+font-size: larger;
+border-radius: 10px;
+}
+
+.head1
+{
+    text-align: center;
+background-color:darkolivegreen;
+color:whitesmoke;
+margin-left: 20px;
+margin-right: 20px;
+}
+
+#para1
+{
+    text-align: justify;
+background-color: #013d60;
+color:whitesmoke;
+margin-left: 20px;
+margin-right: 20px;
+border-style: solid;
+border-color: crimson;
+padding:10px;
+font-size: larger;
+border-radius: 10px;
+}

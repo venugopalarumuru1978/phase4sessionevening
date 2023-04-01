@@ -1,0 +1,201 @@
+Phase 4 Content:-
+-----------------
+1. BootStrap using HTML, CSS and JS
+2. Working with JavaScript
+3. Working with Angular
+-----------------------------------
+Today's Agenda :- 
+-----------------
+1. Introduction to HTML,CSS
+2. Working with BootStrap. 
+-----------------------
+What is a HTML? 
+
+It is a Hyper Text Markup Language which meant for Creating and Designing the web pages. 
+
+Any Markup Language will not have any programming technquies, just it is having some collection of commands called as Tags.
+
+Tags are classified into two types
+
+1. Container Tags
+	These tags are having a begining and ending elements for any task. 
+		<tagname  [properties] .. >
+				Action
+		</tagname>
+
+2. Non-Container Tags 
+	These tags are having only begining elements for any task. 
+		<tagname  [properties] .... />
+
+To work with html, css and javascript we don't need any specific software just it required a browser to execute,  but we need a software to code the program.
+
+VSCode software is used to code the programs. 
+
+<html>
+	<head>		
+		It includes things like "title of the page, css, scripts and meta info" in the form of 			tags.
+	</head>
+
+	<body>
+
+		Actual Program/Web Page Desgin
+
+	</body>
+</html>
+
+Note :-  All web pages having an extension .html
+
+To Design the web page we have to use following two tags
+		Table Tag
+		Div Tag
+
+Table Tag:- 
+
+<table width="%age"  border="1/0">
+	<tr>
+		<th>Col Head - 1</th>
+		<th>Col Head - 2</th>
+		...............
+		<th>Col Head - n</th>
+	</tr>
+
+	<tr>
+		<td>Value-1</td>
+		<td>Value-2</td>
+		...............
+		<td>Value-n</td>
+	</tr>
+
+	....................
+	....................
+</table>
+------------
+<img src="file name"  width="%age/pixels"  height="%age/pixels" alt="text..." /> 
+
+List Tags :- 
+
+these tags are used to present any textual info in the form of point by point. 
+
+tehre are 3 types list tags 
+
+1. Ordered List     :-  here points will be specified with 1/A/a/I/i
+			<ol  type="1/I/i/A/a">
+				<li>POint</li>
+				<li>Point</li>
+				.........
+			</ol>
+2. Unordered List  :-  here points will be specified with symbols(circle/dot/square)
+			<ul  type="circle/dot/square">
+				<li>POint</li>
+				<li>Point</li>
+				.........
+			</ul>
+3. Definition List  :-  here heading and it's defintion has to mentioned.
+				<dl>
+					<dt>Heading</dt>
+					<dd>definition</dd>
+					.....
+					.....
+				</dl>
+
+Page Navigations :- Anchor tag is used
+	<a  href="pagename" target="_blank/....">Link Text</a>
+--------------------------------------------------
+CSS  :-  
+What is a CSS ?
+ It is a Cascading Style Sheets which meant for applying different styles for html elements. 
+
+Styles are applied in 3 ways
+
+1.  Inline CSS :-  these are applied for every tag in html with style property. 
+				<tagname style="propname:value;propname:value;....." ..../>
+2.  Internal/Page Level CSS
+		these are written in <head> by using <style> tag
+		
+			<head>
+				<style>
+				
+				</style>
+			</head>
+
+html allows to write css for every tag as follows
+		tagname{
+			propname:value;
+		}
+here it also allows to write user defined css classes, these are defined in two ways
+			1.  with .(dot)
+			.cssclassname
+			{
+				propname:value;
+				......
+			}
+			to impelemnt for every tag use "class" prop. 
+				<tagname  class="cssclassname" .... />
+
+			2.  with #(hash)
+			#cssclassname
+			{
+				propname:value;
+				......
+			}
+			to impelemnt for every tag use "id" prop. 
+				<tagname  id="cssclassname" .... />
+3.  External/Site Level CSS
+	these css are used in multiple web pages
+		a. Create css file and save with .css extension
+		b. define all css classes into that file
+		c. Link this css file to every html page as follows in head tag
+			<link href="css file name"  rel="stylesheet" />
+-----------------------------
+HTML Forms :- 
+-------------
+These are the collection of tags which allows to create and provide input to the web page. 
+
+The forms are like, text box, buttons, radiobuttons, checkboxes, dropdownlist, .......
+
+For most of the tools are created with <input> tag as follows
+
+textbox :-  this tool allows to input single line of text. 
+	<input  type="text"  name="name of the tool" ...... />
+
+PasswordBox :-  this tool allows to input single line of text with invisible chars. 
+	<input  type="password"  name="name of the tool" ...... />
+
+Buttons :- There are 3 types of buttons (button, submit, reset)
+
+button :-  it allows to execute only script. 
+submit :-  it allows to submit page to the server. 
+reset :-  it allows to refresh the webpage.
+
+<input type="button/submit/reset"  value="Visible text on button"  ..... />
+
+RadioButton :-  these buttons allows to select any one option from group of options. 
+
+<input type="radio"  name="name of tool"  value="val..." />Visiable Text
+
+CheckBox :-  It allows to select multiple options from group of options. 
+
+<input type="checkbox"  name="name of tool"  value="val..."  />Visiable Text
+
+textarea :-  this tag is used for allowing multiple lines of text. 
+
+<textarea  name="name of tool"  cols="no of chars"  rows="no of lines">
+	.....
+</textarea>
+
+dropdownlist :- it holds set of strings and  allows to select any one option. 
+
+<select name="name of tool">
+	<option value="val">text</option>
+	..............
+</select>
+
+Calender :- <input type="date" ... />
+
+Time :  <input type="time" .... />
+
+Email :-  <input type="email" .... />
+
+Numeric textbox : -  <input type="number" min=val  max=val />
+
+Phone :-  <input type="tel"  .... />
