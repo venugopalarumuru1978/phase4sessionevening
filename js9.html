@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+    <style>
+        .demo1
+        {
+            text-align: center;
+            width: 100%;
+        }
+
+        .demo2
+        {
+            text-align: center;
+            width: 100%;
+            color:green;
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center">
+        JavaScript - DropdownList Demo
+    </h1>
+
+    <div class="demo1">
+    <form name="frmTest">
+       <label>Select Country : </label><br /><br />
+        <select name="ddlCtry" onchange="DropdownListEx()">
+            <option value="-1">Select Country</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+        </select>
+        <br /><br />
+    <div id="divState"  style="display:none">
+        <label>Select State : </label><br /><br />
+        <select name="ddlState" id="ddlState"></select>
+    </div>
+    </form>
+    <br /><br />
+        <div class="demo2" id="result"></div>
+    </div>
+
+    <script type="text/javascript">
+       function  DropdownListEx()
+       {
+            var ctry = frmTest.ddlCtry.value;
+
+            if(ctry=="-1")
+            {
+                document.getElementById("divState").style.display = "none";
+            }
+
+            if(ctry=="India")
+            {
+                var states = ["Telanagana", "Karnataka", "Tamil Nadu", "Andhra Praesh"];
+                var st = "<option value='-2'>State</option>";
+                for(let i=0;i<states.length;i++)
+                {
+                    st = st + "<option value='" + states[i] + "'>" + states[i] + "</option>";
+                }
+                document.getElementById("ddlState").innerHTML = st;
+
+                document.getElementById("divState").style.display = "block";
+            }
+
+            if(ctry=="USA")
+            {
+                var states = ["New York", "Washington", "California"];
+                var st = "<option value='-2'>State</option>";
+                for(let i=0;i<states.length;i++)
+                {
+                    st = st + "<option value='" + states[i] + "'>" + states[i] + "</option>";
+                }
+                document.getElementById("ddlState").innerHTML = st;
+                document.getElementById("divState").style.display = "block";
+            }
+       }
+    </script>
+</body>
+</html>

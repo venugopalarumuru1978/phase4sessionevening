@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+    <style>
+        .demo1
+        {
+            text-align: center;
+            width: 100%;
+        }
+
+        .demo2
+        {
+            text-align: center;
+            width: 100%;
+            color:green;
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center">
+        JavaScript - RadioButton Demo
+    </h1>
+
+    <div class="demo1">
+    <form name="frmTest">
+       <label>Payment Methods</label><br /><br />
+       <input type="radio"  name="rdoBank"  value="DC" 
+       onchange="RadioButtonEx()" />
+       <span>Debit Card</span>
+
+       <input type="radio"  name="rdoBank"  value="CC" 
+       onchange="RadioButtonEx()" />
+       <span>Credit Card</span>
+
+       <input type="radio"  name="rdoBank"  value="NB" 
+       onchange="RadioButtonEx()" />
+       <span>Net Banking</span>
+
+    </form>
+    <br /><br />
+        <div class="demo2" id="result"></div>
+    </div>
+
+    
+    <script type="text/javascript">
+       function RadioButtonEx()
+       {
+            var print = document.getElementById("result");
+            var b = frmTest.rdoBank.value;
+            
+            if(b=="DC")
+                print.innerHTML = "Payment using Debit Card";
+            if(b=="CC")
+                print.innerHTML = "Payment using Credit Card";
+            if(b=="NB")
+                print.innerHTML = "Payment using Net Banking";
+       }
+    </script>
+</body>
+</html>

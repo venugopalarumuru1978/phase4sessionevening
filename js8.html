@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+    <style>
+        .demo1
+        {
+            text-align: center;
+            width: 100%;
+        }
+
+        .demo2
+        {
+            text-align: center;
+            width: 100%;
+            color:green;
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body onload="LoadCalenderItems()">
+    <h1 style="text-align: center">
+        JavaScript - DropdownList Demo
+    </h1>
+
+    <div class="demo1">
+    <form name="frmTest">
+       <label>Date of Birth : </label><br /><br />
+        <select name="ddlDay"  id="ddlDay"></select>
+        <select name="ddlMonth" id="ddlMonth"></select>
+        <select name="ddlYear" id="ddlYear"></select>
+        <input type="button"  value="Click Me" onclick="GetDate()"  />
+    </form>
+    <br /><br />
+        <div class="demo2" id="result"></div>
+    </div>
+
+    <script type="text/javascript">
+      function LoadCalenderItems()
+      {
+        var days = "<option value='-1'>Day</option>";
+        for(let i=1;i<=31;i++)
+        {//<option value='1'>1</option>
+            days = days + "<option value='" + i + "'>" + i + "</option>";
+        }
+        document.getElementById("ddlDay").innerHTML = days;
+
+        var dt = new Date();
+        var yr = dt.getFullYear();
+        var years = "<option value='-3'>Year</option>";
+        for(let i=1905;i<=yr;i++)
+        {
+            years = years + "<option value='" + i + "'>" + i + "</option>";
+        }
+        document.getElementById("ddlYear").innerHTML = years;
+
+        var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+        var mths = "<option value='-2'>Month</option>";
+        for(let i=0;i<months.length;i++)
+        {
+            mths = mths + "<option value='" + months[i] + "'>" + months[i] + "</option>";
+        }
+        document.getElementById("ddlMonth").innerHTML = mths;
+      }
+
+      function GetDate()
+      {
+        var d = frmTest.ddlDay.value;
+        var m = frmTest.ddlMonth.value;
+        var y = frmTest.ddlYear.value;
+
+        var result =  d + "-" + m + "-" + y;
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+</body>
+</html>

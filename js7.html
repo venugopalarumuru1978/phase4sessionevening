@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+    <style>
+        .demo1
+        {
+            text-align: center;
+            width: 100%;
+        }
+
+        .demo2
+        {
+            text-align: center;
+            width: 100%;
+            color:green;
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center">
+        JavaScript - DropdownList Demo
+    </h1>
+
+    <div class="demo1">
+    <form name="frmTest">
+       <label>Select City : </label><br /><br />
+        <select name="ddlCity" onchange="DropdownListEx()">
+            <option value="-1">Select City</option>
+            <option value="Hyderbad">Hyderabad</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Mumbai">Mumbai</option>
+        </select>
+    </form>
+    <br /><br />
+        <div class="demo2" id="result"></div>
+    </div>
+
+    <script type="text/javascript">
+       function  DropdownListEx()
+       {
+            var ct = frmTest.ddlCity.value;
+            if(ct!="-1")
+                document.getElementById("result").innerHTML = "Ur City is : " + ct;
+            else
+                alert("Please select city");
+       }
+    </script>
+</body>
+</html>

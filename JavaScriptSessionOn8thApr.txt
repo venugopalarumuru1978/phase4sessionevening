@@ -1,0 +1,84 @@
+Today's Agenda:-
+-----------------
+JavaScript
+TypeScript
+------------------
+What is a Script?
+	Programming with Web Page.
+
+There are different script languages are exist.
+		VBScript
+		JavaScript
+		ECMAScript  (Modified ECMAScript is ES5/ES6)
+
+Purpose of Any Script Language is :
+		1.  Creating Dynamic Web Pages
+		2.  Validating web page inputs
+
+What is a JavaScript:- 
+	It is a Loosely Typed Script Lang which meant for Creating dynamic pages and Validating web 		page inputs at client side. 
+
+	JavaScript is a Browser Independent Script Lang. 
+
+1. Since it is Loosely Typed, it doesn't hava any data types to declare variables.
+	variables are declared as follows
+		var/let  <variable> = <value>
+			or
+		variable = value
+2. To Write Script program we have to use Html Program UI, within that following tag has to be used
+	to write script code
+	<script  type="text/javascript">
+			script code
+	</script>
+	Note :-  this tag has to present at the end of  <body> tag. 
+3.  To print some thing on the browser, use following statement
+		document.write/writeln("stmt"/variable);
+
+		here "document" is an object, which represents currently working web page. 
+	
+	What is a DOM? 
+			It is a "Document Object Model", it consist collection methods to perform 
+			different kinds of actions. 
+			every method can be accessed with an object.
+
+4.   Script is a Function based language, so that every task has to defined with in  a function. 
+		here it is how to create a function
+			function <fun_name>([arg])
+			{
+				code
+			}
+		Once function is defined, call that function
+			<fun_name>([arg values])
+
+5.  Any GUI programming is Event Driven Programing. So that An Event is, Action oriented method executed by performing another action. 
+		Click		:- it is used for button, here event name is "onclick" 		
+		DoubleClick	:- it is also used for button, event name is "ondblclick"
+		Change		:- it is used for radiobutton, dropdownlist, checkbox, 
+							event name  "onchange"
+		Load		:- it is used to perform any action when web page is loading(body)
+					event name :  "onload"
+		Submit
+		KeyPress
+		KeyUp
+		KeyDown
+		DraganDrop
+6.  All Web Page input tools should be enclosed within the <form> tag. 
+		<form  name="name of form"  method="POST/GET"  action="Pagename">
+			
+		</form>
+	Note :-  to get/set value from any tool, we have to use following syntax
+				to set :   formname.toolname.value = <value>
+				to get :   variable = formname.toolname.value
+7.  To identify any html element / tag with "ID" property 
+		document.getElementById("id prop name")
+	It has two properties
+			innerText :-  it allows to print any statement in text format.
+			innerHTML :-  it allows to print any statement in html format.
+
+8.  To Create an array :
+		var <variablename> = [val1, val2, ....]
+
+9. there are two function to convert values from string to numbers 
+		parseInt(str) :-  integer
+		parseFloat(str) :-  decimal
+---------------------------------

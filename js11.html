@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+    <style>
+        .demo1
+        {
+            text-align: center;
+            width: 100%;
+        }
+
+        .demo2
+        {
+            text-align: center;
+            width: 100%;
+            color:green;
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center">
+        JavaScript - Textbox and Button Demo
+    </h1>
+
+    <div class="demo1">
+    <form name="frmTest">
+        <label>Value - 1</label>
+        <input type="text"  id="txtVal1" />
+        <br /><br />
+        <label>Value - 2</label>
+        <input type="text"  id="txtVal2" />
+        <br /><br />
+        <input type="button"  value="Addition " onclick="GetValueFun()" />
+    </form>
+    <br /><br />
+        <div class="demo2" id="result"></div>
+    </div>
+
+    <script type="text/javascript">
+        function GetValueFun()
+        {
+          var x = parseFloat(document.getElementById("txtVal1").value);
+          var y = parseFloat(document.getElementById("txtVal2").value);
+
+          var sum = x+y;
+
+          document.getElementById("result").innerHTML = "Add : " + sum;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+    <style>
+        .demo1
+        {
+            text-align: center;
+            width: 100%;
+        }
+
+        .demo2
+        {
+            text-align: center;
+            width: 100%;
+            color:green;
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center">
+        JavaScript - RadioButton Demo
+    </h1>
+
+    <div class="demo1">
+    <form name="frmTest">
+       <label>Show Images</label><br /><br />
+       <input type="radio"  name="rdoPic" id="rdo1"  value="pic1.jpg" />
+       <span>Image - 1</span>
+
+       <input type="radio"  name="rdoPic" id="rdo2"  value="Pic2.jpg" />
+       <span>Image - 2</span>
+
+       <input type="radio"  name="rdoPic" id="rdo3" value="Img3.jpg" />
+       <span>Image - 3</span>
+
+       <input type="button"  value="Show Image" onclick="RadioButtonEx()" />
+    </form>
+    <br /><br />
+        <div class="demo2" id="result"></div>
+    </div>
+
+    <script type="text/javascript">
+       function RadioButtonEx()
+       {
+            if(document.getElementById("rdo1").checked==true ||
+            document.getElementById("rdo2").checked==true ||
+            document.getElementById("rdo3").checked==true)
+            {
+                var print = document.getElementById("result");
+                var picname = frmTest.rdoPic.value;
+            //<img src='Images/Img3.jpg'  width='100%'  height='300px' />
+                var showpic = "<img src='Images/" + picname + "'  width='100%'  height='300px' />";
+                print.innerHTML = showpic;
+            }
+            else
+                alert("Please select anyone image option");
+       }
+    </script>
+</body>
+</html>
