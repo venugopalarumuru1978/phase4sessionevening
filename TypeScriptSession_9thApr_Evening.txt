@@ -1,0 +1,186 @@
+Today's Agenda :- 
+-----------------
+1.  TypeScript
+2.  Angular
+----------------------
+What is an TypeScript?
+
+It is a programming language which is developed by using JavaScript. 
+
+TypeScript =  JavaScript + Additional Features
+
+Additional Features:- 
+--------------------
+1. Data Types
+2. OOPS Concepts
+3. Modules(packages)
+4. Misc Concepts 
+	a. Arrow Functions
+	b. String Interpolation
+	c. Mulitline Strings
+
+Purpose of TypeScript,  While Developing angular application, it uses TypeScript. 
+
+TypeScript programs cannot be implemented in web page directly, so that every typescript program has to convert  in javascript, then that js code can be implemented in web page. 
+
+TypeScript Program  ==> Compiler  ==> JavaScript Code  ==> Run  ==> Output.
+
+For Software Installation Process
+
+What is an NPM ?
+	Full Form :  Node Package Manager Installer.
+	It is a World Largest Software Library for any kind of frontend programming lang. 
+			TypeScript
+			Angular
+			React JS
+			Express JS
+			Node JS
+			Vue JS
+	It has nearly 8 lakhs packages within it. 
+	It is an Open Source Library(freely can use it).
+	To Install NPM, we have to install "Node JS".
+		Goto http://nodejs.org, download latest/specific version nodejs then install it.
+	Once Node js is Installed, then we can install TypeScript as follows
+
+		1.  Goto command prompt
+		2.  use the following command to install typescript
+			npm  install  typescript  -g
+
+How to write TypeScript Program :- 
+
+1.  Open any editor(VSCode)
+2.  Code the program and save that program with .ts extension
+3.  Now goto command prompt, then following command to compile
+		tsc  filename.ts
+4.  once it compiled successfully, it generate javascript code
+		now run the program with following command
+		node filename.js
+--------------------------------------------------
+Data types :- 
+
+1.  number :-  it is for both integers/decimal values
+2.  string :-  for strings
+3.  boolean :-  for true/false
+4.  any :-  for any type value
+
+	var  <variable> : <data type>= <value>;
+------------------
+OOPS Concepts :- 
+
+class <classname>
+{
+	variables declarations
+	
+	methodname([arg]) :  <return type>
+	{
+		code for the method.
+	}
+	....
+}
+note 1:-  while declaring variables inside the class, var/let should not use.
+note 2:-  the variable declared inside the class can be access in the methods with the hlep of "this" 		keyword.
+				this.variable
+Object Creation :- 
+	
+	var/let Object = new ClassName([arg]);
+
+TypeScript allows access specifiers also: private, public, protected
+
+To create a constructor in typescript, use "constructor" keyword as follows
+
+class <classname>
+{
+
+	constructor([args])
+	{
+		......
+	}
+}
+
+Inheritance :- 
+
+to inherit  parent class to the child class "extends" keyword
+to inherit  interface to the class "implements" keyword.
+--------------
+
+As per TypeScript, No polymarphisum
+
+---------------
+What is a Module? 
+
+It is the process of creating packages using typescript, i.e. using one class objects into another class. 
+
+whenever we want's use one class into another class, that class create with "export" keyword
+
+export  class <classname>
+{
+	....
+}
+
+once export class is defined, that can be imported into another class as follows
+
+import { Classname }  from './filename';
+-------------------------------------------------------------------------------------
+What is an angular? 
+
+It is an client-side web framework used to create web applications. 
+
+By using Angular, We can create SPA(Single Page Application) based web applications. 
+
+SPA :- One web page manages all other web pages within the web application/web site.
+		It will avoid re-loading the entire web page when we are working with some porton of 		the web page. based on this process performance of the application will be improved. 
+
+Angular is cross - platform framework. so that it works in all the OS's. 
+To develop application using angular, typescript lang need. 
+
+How to install angular software
+
+1.  Install Node JS
+2.  Install TypeScript
+3.  Install Angular as follows
+		a. goto command prompt then use following command
+			npm  install @angular/cli -g  == it will install latest version
+
+			npm  install @angular/cli@10.2.0 -g == it will install specific version
+------------------------------
+How to create an angular application
+	a.  Goto Command Prompt
+	b.  use following command to create angular application
+			ng new <application_name>
+
+To Run  the application :- 
+		"ng serve" command has to be used at command prompt.
+
+to stop the application, Ctrl+C is used
+-------------------------------
+What is a component? 
+		It is a  building block of the angular app, which consist of following files
+				html file == for UI
+				css file == for styles
+				ts  file == for scripting
+				spec.ts file = for testing
+when we create a new application, it create one component called as "App" component. it is also called as root component. 
+
+How to create a componenet
+		ng generate component  <comp name>
+				or
+		ng g component  <comp name>
+-------------------------
+Data Bindings :-  it is the relation b/w template(html file) and script(ts code).
+
+it can be done in 4 ways
+
+1. Interpolation
+2. Property Binding
+3. Event Binding
+4. Two _ Way Binding
+
+Interpolation :-  It is the process of the how to show a varible value into template
+			{{variable }}
+
+Event  Binding :-  it is the process adding event to the tools(button, radiobutton, ...)
+			<tag (eventname) = "method()" ... />
+
+			<input type="button"  value="click me"  onclick="m()" />  as per JS
+		<input type="button"  value="click me"  (click)="m()" /> => as per ANgular
+
