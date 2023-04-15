@@ -1,0 +1,116 @@
+Today's Agenda:-
+-----------------
+1. Data Bindings
+2. Directives
+3. Pipes
+4. Routing
+---------------------------------
+What is a component? 
+		It is a  building block of the angular app, which consist of following files
+				html file == for UI
+				css file == for styles
+				ts  file == for scripting
+				spec.ts file = for testing
+when we create a new application, it create one component called as "App" component. it is also called as root component. 
+
+How to create a componenet
+		ng generate component  <comp name>
+				or
+		ng g component  <comp name>
+-------------------------
+Data Bindings :-  it is the relation b/w template(html file) and script(ts code).
+
+it can be done in 4 ways
+
+1. Interpolation
+2. Property Binding
+3. Event Binding
+4. Two-Way Binding
+
+Interpolation :-  It is the process of the how to show a varible value into template
+			{{variable }}
+
+Event  Binding :-  it is the process adding event to the tools(button, radiobutton, ...)
+			<tag (eventname) = "method()" ... />
+
+			<input type="button"  value="click me"  onclick="m()" />  as per JS
+		<input type="button"  value="click me"  (click)="m()" /> => as per ANgular
+Property Binding :- 
+	It is the proess of handling atttributes of the different tags.
+		<tag  [attribute]="variable"  ... />
+Two Way Binding :-  It is the process of binding script variable to html forms(textbox, radiobutton, ....). here when we change a value in html page that value directly changed in script variable and vice versa.
+
+here "ngModel" directive has to be used to use Two Way binding
+
+	<Tag  [(ngModel)]="variable"   name="variable" .... />
+
+directives are the html based keyword provided by angular to perform different tasks. 
+
+to work with directives, we have to import "FormsModule" package in app.module.ts
+	import { FormsModule } from '@angular/forms';
+then add "FormsModule"  in imports section as follows
+imports: [
+   .......
+    FormsModule
+  ],
+--------------------
+To install bootstrap in angular application, use following command
+ng add  @ng-bootstrap/ng-bootstrap
+--------------------
+Directives :- 
+
+These are the keywords of angular which can be used in template(html page) to perform different actions. every directive starts with "ng".
+
+ngModel  :- it is meant for two way binding
+ngClass  :- it is used to call a class with script variable.
+ngIf	 :- it is meant for checking condition. 
+			<tag *ngIf="condition">
+			</tag>
+ngIf-else
+		<tag  *ngIf="condition; then template1;else template2></tag>
+			Here templates are the containers where some information has been shown.
+			to define that templates
+				<ng-template #templatename>
+				</ng-template>
+ngFor	:-  it is a loop to print array variables values in template. 
+			<tag *ngFor="let var of arrayname">
+			</tag>
+ngSwitch :-   it is also used to check conditions
+
+	<tag [ngSwitch]="property">
+		<tag  *ngSwitchCase=" 'value' "></tag>
+		<tag  *ngSwitchCase=" 'value' "></tag>
+		<tag  *ngSwitchDefault></tag>
+	</tag>
+---------------------------------
+To create typescript class 
+	ng g class <Classname>
+---------------------------------
+As per angular, by using push() method we can add any value to the array dynamically. 
+		arrayname.push(value/variable/object)
+splice(index, no of values) :- it delete's values based on index position. 
+-----------------------------
+Pipes :- 
+A pipe a keyword of angular used in template(html)  to transform data as per user required format. 
+	<tag variable |  pipe >
+
+uppercase
+lowercase
+date
+currency
+json
+number
+----------------------------
+Routing :- Routing is the concept of providing navigations b/w components. 
+	To work with this concept, "Routes, RouterModule" classes are required. 
+
+1. Goto  app-routing.module.ts file then define routes(links for component) for every component. 
+	var  <routes_classobj> :Routes = [
+		{path:"linktext", component:Componentname, ...},
+		{path:"linktext", component:Componentname, ...},
+	]
+2.  Goto  app.component.html then define a container to view a component content. 
+		<router-outlet></<router-outlet>
+
+3. if required, we can assign any route to the <a> tag follows in app.component.html
+		<a routerLink="linktext">Text</a>
